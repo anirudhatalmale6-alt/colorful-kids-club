@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register Your Interest — Dharmic Stars</title>
+<meta name="description" content="Register your child's interest in Dharmic Stars — a weekly Hindu heritage club for children aged 5–13 in Solihull.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="demo-note">✨ Preview site for Dharmic Stars — this is a demo form (emails go live once on hosting) ✨</div>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="index.html"><img class="logo-img" src="logo.jpg" alt="Dharmic Stars — Learn, Grow, Shine"></a>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+      <a href="links.html">Links</a>
+      <a class="btn btn-primary nav-cta" href="register.html">Register</a>
+    </nav>
+    <button class="burger" aria-label="menu">☰</button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">📝 Registration</span>
+    <h1>Register your <span class="grad">interest</span></h1>
+    <p>Fill in a few details and we'll be in touch with a place for your child. Families receive an instant email confirmation, and our team is alerted right away.</p>
+  </div>
+</section>
+
+<section style="padding-bottom:clamp(3rem,7vw,5.5rem)">
+  <div class="narrow">
+    <form class="form-card" id="regForm" novalidate>
+
+      <div class="form-step-tag"><span class="n">1</span> Parent / Carer details</div>
+      <div class="grid2">
+        <div class="field"><label>Parent / carer name <span class="req">*</span></label><input name="pname" required placeholder="e.g. Priya Sharma"></div>
+        <div class="field"><label>Relationship to child</label><input name="prel" placeholder="e.g. Mother, Father, Guardian"></div>
+        <div class="field"><label>Email address <span class="req">*</span></label><input type="email" name="pemail" required placeholder="you@example.com"></div>
+        <div class="field"><label>Mobile / WhatsApp <span class="req">*</span></label><input name="pphone" required placeholder="07XXX XXXXXX"></div>
+      </div>
+
+      <div class="form-step-tag"><span class="n">2</span> Child details</div>
+      <div class="grid2">
+        <div class="field"><label>Child's first name <span class="req">*</span></label><input name="cname" required placeholder="e.g. Aarav"></div>
+        <div class="field"><label>Child's age <span class="req">*</span></label>
+          <select name="cage" required>
+            <option value="" disabled selected>Select age</option>
+            <option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option>
+          </select>
+        </div>
+        <div class="field"><label>Preferred class group</label>
+          <select name="cgroup">
+            <option value="" disabled selected>We'll suggest by age</option>
+            <option>Ages 5–7 · Sat 9:00–10:00 am</option>
+            <option>Ages 8–10 · Sat 10:15–11:15 am</option>
+            <option>Ages 11–13 · Sat 11:30–12:30 pm</option>
+          </select>
+        </div>
+        <div class="field"><label>School (optional)</label><input name="cschool" placeholder="Child's school"></div>
+      </div>
+      <div class="field"><label>Allergies / medical / additional needs (optional)</label><textarea name="cmed" rows="3" placeholder="Anything our team should know to keep your child safe and happy"></textarea></div>
+
+      <div class="form-step-tag"><span class="n">3</span> Emergency contact</div>
+      <div class="grid2">
+        <div class="field"><label>Emergency contact name</label><input name="ename" placeholder="Full name"></div>
+        <div class="field"><label>Emergency contact number</label><input name="ephone" placeholder="07XXX XXXXXX"></div>
+      </div>
+
+      <div class="form-step-tag"><span class="n">4</span> Consent</div>
+      <label class="check"><input type="checkbox" name="photo"> I'm happy for photos of my child taken during activities to be used in Dharmic Stars materials (optional).</label>
+      <label class="check"><input type="checkbox" name="terms" required> I confirm the details above are correct and agree to be contacted about my child's place. <span class="req">*</span></label>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">📩 Submit registration</button>
+        <span class="form-note">🔒 Your details are kept private and only seen by the Dharmic Stars team.</span>
+      </div>
+
+      <div class="success" id="ok">
+        <h3>🎉 Thank you — registration received!</h3>
+        <p>In the live site, a confirmation email is sent to you instantly and the Dharmic Stars team is alerted. We'll be in touch about your child's place soon.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <div style="background:#fff;border-radius:20px;padding:.7rem;display:inline-block;margin-bottom:1rem;box-shadow:var(--shadow-sm)"><img src="logo.jpg" alt="Dharmic Stars" style="height:96px;width:auto;display:block"></div>
+      <p style="color:#c9b8ff;font-weight:600;max-width:34ch">Learn • Grow • Shine — bright Saturdays of Hindu culture, stories and friendship for children aged 5–13.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About us</a>
+      <a href="faq.html">FAQ</a>
+      <a href="links.html">Links &amp; Resources</a>
+    </div>
+    <div>
+      <h4>Get in touch</h4>
+      <a href="mailto:info@dharmicstars.com">info@dharmicstars.com</a>
+      <a href="#">Phone / WhatsApp — coming soon</a>
+      <a href="#">📍 Solihull • venue to be confirmed</a>
+      <a href="register.html">Register your interest</a>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">Preview site • Dharmic Stars • Built by Anirudha for your review</div>
+</footer>
+
+<script src="app.js"></script>
+<script>
+document.getElementById('regForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  if(!this.checkValidity()){this.reportValidity();return;}
+  document.getElementById('ok').classList.add('show');
+  this.querySelector('button[type=submit]').textContent='✅ Submitted';
+  document.getElementById('ok').scrollIntoView({behavior:'smooth',block:'center'});
+});
+</script>
+</body>
+</html>
