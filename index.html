@@ -51,9 +51,10 @@ img{max-width:100%;display:block}
 .btn-ghost{background:#fff;color:var(--grape);box-shadow:var(--shadow-sm)}
 
 /* ---------- NAV ---------- */
-header.nav{position:sticky;top:0;z-index:50;background:rgba(255,248,236,.9);backdrop-filter:blur(10px);border-bottom:3px solid #ffe4b0}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:.7rem 0}
+header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:3px solid #e9f4ff}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:.55rem 0}
 .logo{display:flex;align-items:center;gap:.6rem;font-family:var(--font-head);font-weight:800;font-size:1.35rem}
+.logo-img{height:56px;width:auto}
 .logo .mark{width:44px;height:44px;border-radius:50%;background:conic-gradient(from 20deg,var(--saffron),var(--pink),var(--grape),var(--teal),var(--marigold),var(--saffron));display:grid;place-items:center;font-size:1.4rem;box-shadow:var(--shadow-sm);animation:spin 14s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 .logo .mark span{animation:spin 14s linear infinite reverse}
@@ -66,7 +67,7 @@ nav.links a:hover::after{width:100%}
 .burger{display:none;background:none;border:none;font-size:1.8rem;cursor:pointer;color:var(--ink)}
 
 /* ---------- HERO ---------- */
-.hero{position:relative;padding:clamp(2.5rem,6vw,5rem) 0 clamp(3rem,7vw,6rem);overflow:hidden}
+.hero{position:relative;padding:clamp(2.5rem,6vw,5rem) 0 clamp(3rem,7vw,6rem);overflow:hidden;background:radial-gradient(1200px 500px at 78% 20%,rgba(120,196,255,.28),transparent 60%)}
 .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;align-items:center}
 .eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:#fff;color:var(--grape);font-weight:800;font-family:var(--font-head);padding:.4rem 1rem;border-radius:999px;box-shadow:var(--shadow-sm);font-size:.95rem;margin-bottom:1.2rem}
 .hero h1{font-size:clamp(2.4rem,5.4vw,4.2rem);font-weight:800}
@@ -77,9 +78,11 @@ nav.links a:hover::after{width:100%}
 .trust span{display:flex;align-items:center;gap:.4rem}
 
 /* hero art */
-.hero-art{position:relative;height:100%;min-height:340px}
-.blob{position:absolute;inset:0;margin:auto;width:88%;aspect-ratio:1;background:radial-gradient(circle at 30% 30%,var(--marigold),var(--saffron));border-radius:42% 58% 55% 45%/48% 43% 57% 52%;box-shadow:var(--shadow);animation:morph 9s ease-in-out infinite}
-@keyframes morph{50%{border-radius:58% 42% 45% 55%/57% 52% 48% 43%}}
+.hero-art{position:relative;height:100%;min-height:360px;display:grid;place-items:center}
+.glow{position:absolute;inset:0;margin:auto;width:80%;aspect-ratio:1;background:radial-gradient(circle,rgba(120,196,255,.55),rgba(255,197,49,.18) 55%,transparent 72%);filter:blur(6px);animation:morph 9s ease-in-out infinite}
+.hero-logo{position:relative;width:min(78%,380px);border-radius:28px;box-shadow:0 22px 40px -14px rgba(58,36,86,.3);animation:floaty 6s ease-in-out infinite}
+@keyframes floaty{50%{transform:translateY(-14px)}}
+@keyframes morph{50%{transform:scale(1.06)}}
 .float{position:absolute;font-size:clamp(2.2rem,5vw,3.4rem);filter:drop-shadow(0 8px 10px rgba(58,36,86,.25));animation:bob 4s ease-in-out infinite}
 .float.f1{top:4%;left:6%;animation-delay:0s}
 .float.f2{top:12%;right:2%;animation-delay:.6s}
@@ -184,7 +187,7 @@ footer a:hover{color:#fff}
 
 <header class="nav">
   <div class="wrap nav-inner">
-    <a class="logo" href="#"><span class="mark"><span>🪔</span></span> Dharmic Stars</a>
+    <a class="logo" href="#"><img class="logo-img" src="logo.jpg" alt="Dharmic Stars — Learn, Grow, Shine"></a>
     <nav class="links">
       <a href="#activities">Activities</a>
       <a href="#play">Fun Zone</a>
@@ -201,7 +204,7 @@ footer a:hover{color:#fff}
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="reveal in">
-      <span class="eyebrow">🌈 Saturdays • Ages 5–13</span>
+      <span class="eyebrow">🌈 Saturdays • Ages 5–13 • Learn · Grow · Shine</span>
       <h1>Where little ones <span class="grad">learn, play &amp; grow</span> the Hindu way!</h1>
       <p class="lead">Stories, festivals, art, yoga and mother-tongue — a joyful Saturday club that makes our culture come alive for kids.</p>
       <div class="hero-cta">
@@ -215,12 +218,12 @@ footer a:hover{color:#fff}
       </div>
     </div>
     <div class="hero-art">
-      <div class="blob"></div>
+      <div class="glow"></div>
+      <img class="hero-logo" src="logo.jpg" alt="Dharmic Stars logo">
       <div class="float f1">🐘</div>
       <div class="float f2">🦚</div>
       <div class="float f3">🎨</div>
       <div class="float f4">🕉️</div>
-      <div class="float f5">🪔</div>
     </div>
   </div>
 </section>
@@ -326,8 +329,8 @@ footer a:hover{color:#fff}
 <footer id="faq">
   <div class="wrap foot-grid">
     <div>
-      <div class="logo" style="color:#fff;margin-bottom:.8rem"><span class="mark"><span>🪔</span></span> Dharmic Stars</div>
-      <p style="color:#c9b8ff;font-weight:600;max-width:34ch">Bright Saturdays of Hindu culture, stories and friendship for children aged 5–13.</p>
+      <div style="background:#fff;border-radius:20px;padding:.7rem;display:inline-block;margin-bottom:1rem;box-shadow:var(--shadow-sm)"><img src="logo.jpg" alt="Dharmic Stars" style="height:96px;width:auto;display:block"></div>
+      <p style="color:#c9b8ff;font-weight:600;max-width:34ch">Learn • Grow • Shine — bright Saturdays of Hindu culture, stories and friendship for children aged 5–13.</p>
     </div>
     <div>
       <h4>Explore</h4>
