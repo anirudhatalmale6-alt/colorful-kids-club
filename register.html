@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Register Your Interest — Dharmic Stars</title>
-<meta name="description" content="Register your child's interest in Dharmic Stars — a weekly Hindu heritage club for children aged 5–13 in Solihull.">
+<meta name="description" content="Book your child's place at Dharmic Stars — fun, engaging Hinduism classes for children aged 5+ in Solihull, West Midlands.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
@@ -58,12 +58,13 @@
             <option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option>
           </select>
         </div>
-        <div class="field"><label>Preferred class group</label>
+        <div class="field"><label>Preferred age group</label>
           <select name="cgroup">
             <option value="" disabled selected>We'll suggest by age</option>
-            <option>Ages 5–7 · Sat 9:00–10:00 am</option>
-            <option>Ages 8–10 · Sat 10:15–11:15 am</option>
-            <option>Ages 11–13 · Sat 11:30–12:30 pm</option>
+            <option>Ages 5–7</option>
+            <option>Ages 8–10</option>
+            <option>Ages 11+</option>
+            <option>Not sure — please advise</option>
           </select>
         </div>
         <div class="field"><label>School (optional)</label><input name="cschool" placeholder="Child's school"></div>
@@ -76,8 +77,23 @@
         <div class="field"><label>Emergency contact number</label><input name="ephone" placeholder="07XXX XXXXXX"></div>
       </div>
 
-      <div class="form-step-tag"><span class="n">4</span> Consent</div>
-      <label class="check"><input type="checkbox" name="photo"> I'm happy for photos of my child taken during activities to be used in Dharmic Stars materials (optional).</label>
+      <div class="form-step-tag"><span class="n">4</span> Policies &amp; consent</div>
+      <div class="policy-pack">
+        <p class="pp-title">📄 Please review our policies before confirming</p>
+        <p class="pp-sub">On the live site, a copy of each document is emailed to you and stored securely with your registration.</p>
+        <div class="pp-links">
+          <a href="policies.html" target="_blank">📘 Parent Handbook</a>
+          <a href="policies.html" target="_blank">🛡️ Safeguarding Policy</a>
+          <a href="policies.html" target="_blank">⛑️ Health &amp; Safety</a>
+          <a href="policies.html" target="_blank">🔒 GDPR Privacy Notice</a>
+        </div>
+      </div>
+      <label class="check"><input type="checkbox" name="handbook" required> I have read and received the Parent Handbook and understand the behaviour expectations. <span class="req">*</span></label>
+      <label class="check"><input type="checkbox" name="collection" required> I agree to the arrival and collection arrangements. <span class="req">*</span></label>
+      <label class="check"><input type="checkbox" name="medical" required> I confirm the medical, allergy and additional-needs information provided is accurate. <span class="req">*</span></label>
+      <label class="check"><input type="checkbox" name="emergency" required> I give consent for emergency first aid or medical treatment for my child if required. <span class="req">*</span></label>
+      <label class="check"><input type="checkbox" name="gdpr" required> I have read and acknowledge the GDPR Privacy Notice and Safeguarding Policy. <span class="req">*</span></label>
+      <label class="check"><input type="checkbox" name="photo"> I give permission for photos of my child taken during activities to be used in Dharmic Stars materials <b>(optional)</b>.</label>
       <label class="check"><input type="checkbox" name="terms" required> I confirm the details above are correct and agree to be contacted about my child's place. <span class="req">*</span></label>
 
       <div class="form-actions">
@@ -97,7 +113,7 @@
   <div class="wrap foot-grid">
     <div>
       <div style="background:#fff;border-radius:20px;padding:.7rem;display:inline-block;margin-bottom:1rem;box-shadow:var(--shadow-sm)"><img src="logo.jpg" alt="Dharmic Stars" style="height:96px;width:auto;display:block"></div>
-      <p style="color:#c9b8ff;font-weight:600;max-width:34ch">Learn • Grow • Shine — bright Saturdays of Hindu culture, stories and friendship for children aged 5–13.</p>
+      <p style="color:#c9b8ff;font-weight:600;max-width:34ch">Learn • Grow • Shine — fun, engaging Hinduism classes for children in Solihull, West Midlands.</p>
     </div>
     <div>
       <h4>Explore</h4>
@@ -111,7 +127,7 @@
       <h4>Get in touch</h4>
       <a href="mailto:info@dharmicstars.com">info@dharmicstars.com</a>
       <a href="#">Phone / WhatsApp — coming soon</a>
-      <a href="#">📍 Solihull • venue to be confirmed</a>
+      <a href="#">📍 Solihull • venue confirmed on booking</a>
       <a href="register.html">Register your interest</a>
     </div>
   </div>

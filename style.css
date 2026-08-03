@@ -231,6 +231,47 @@ footer a:hover{color:#fff}
 .match-win.show{display:block;animation:pop .5s ease}
 @media(max-width:480px){.match-grid{gap:.6rem}}
 
+/* ---------- STORY / MISSION / LEARN / TEACHER ---------- */
+.story-card{background:#fff;border-radius:28px;padding:clamp(1.6rem,4vw,2.6rem);box-shadow:var(--shadow-sm);border:2px solid #f0e3ff;max-width:900px;margin:0 auto}
+.story-card p{color:var(--ink-soft);font-weight:600;margin-bottom:1rem;font-size:1.05rem}
+.story-card p:last-child{margin-bottom:0}
+.story-card i{color:var(--grape)}
+
+.topics{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center;max-width:900px;margin:0 auto}
+.topic{background:#fff;border:2px solid #f0e3ff;border-radius:999px;padding:.6rem 1.1rem;font-family:var(--font-head);font-weight:700;color:var(--ink);box-shadow:var(--shadow-sm);font-size:.95rem}
+
+.teacher{display:grid;grid-template-columns:260px 1fr;gap:2rem;align-items:center;background:#fff;border-radius:28px;padding:clamp(1.6rem,4vw,2.6rem);box-shadow:var(--shadow-sm);border:2px solid #e9f4ff;max-width:960px;margin:0 auto}
+.teacher-badge{background:linear-gradient(160deg,var(--grape),var(--pink));border-radius:22px;padding:1.8rem 1rem;text-align:center;color:#fff}
+.tb-emoji{font-size:4rem;line-height:1}
+.tb-name{font-family:var(--font-head);font-weight:800;font-size:1.7rem;margin-top:.4rem}
+.tb-role{font-weight:700;opacity:.9}
+.teacher-body p{color:var(--ink-soft);font-weight:600;margin-bottom:1rem}
+.teacher-body i{color:var(--grape)}
+.teacher-creds{display:flex;flex-wrap:wrap;gap:.6rem;margin:0 0 1rem}
+.teacher-creds span{background:#eafff0;color:#137a4a;border-radius:999px;padding:.4rem .9rem;font-weight:700;font-size:.9rem}
+
+.checklist{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;max-width:960px;margin:0 auto}
+.chk{background:#fff;border:2px solid #f0e3ff;border-radius:16px;padding:.9rem 1.1rem;font-family:var(--font-head);font-weight:700;color:var(--ink);box-shadow:var(--shadow-sm);font-size:.95rem}
+
+.support-band{background:linear-gradient(160deg,#fff3d6,#ffe6f2);border-radius:32px;padding:clamp(1.8rem,4vw,3rem);box-shadow:var(--shadow-sm);max-width:960px;margin:0 auto}
+.support-band h2{margin:.6rem 0 .6rem}
+.support-band p{color:var(--ink-soft);font-weight:600;margin-bottom:1rem}
+
+@media(max-width:860px){
+  .teacher{grid-template-columns:1fr}
+  .teacher-badge{max-width:260px;margin:0 auto}
+  .checklist{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){.checklist{grid-template-columns:1fr}}
+
+/* ---------- REGISTRATION POLICY PACK ---------- */
+.policy-pack{background:#eef7ff;border:2px solid #d6ebff;border-radius:18px;padding:1.1rem 1.3rem;margin:.4rem 0 1.1rem}
+.pp-title{font-family:var(--font-head);font-weight:800;color:var(--ink);margin-bottom:.2rem}
+.pp-sub{color:var(--ink-soft);font-weight:600;font-size:.9rem;margin-bottom:.8rem}
+.pp-links{display:flex;flex-wrap:wrap;gap:.6rem}
+.pp-links a{background:#fff;border:2px solid #cfe6ff;border-radius:999px;padding:.4rem .9rem;font-weight:700;color:var(--grape);font-size:.9rem}
+.pp-links a:hover{border-color:var(--grape)}
+
 /* ---------- POLICIES PAGE ---------- */
 .pol-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin-bottom:2.4rem}
 .pol-card{background:#fff;border:2px solid #f0e3ff;border-radius:22px;padding:1.4rem;text-align:center;box-shadow:var(--shadow-sm)}
