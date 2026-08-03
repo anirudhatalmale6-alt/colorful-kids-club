@@ -304,3 +304,20 @@ footer a:hover{color:#fff}
   .about-media{order:-1}
 }
 @media(max-width:480px){.opts{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}.foot-grid{grid-template-columns:1fr}}
+
+/* photo gallery */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+.gal-item{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--shadow-sm);aspect-ratio:4/3;background:#f0e9ff}
+.gal-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.gal-item:hover img{transform:scale(1.06)}
+.gal-item .cap{position:absolute;left:0;right:0;bottom:0;padding:1.4rem .9rem .8rem;color:#fff;font-weight:800;font-size:.98rem;background:linear-gradient(180deg,transparent,rgba(58,36,86,.72))}
+@media(max-width:860px){.gallery{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.gallery{grid-template-columns:1fr}}
+
+/* social icons */
+.social{display:flex;gap:.7rem;align-items:center;margin-top:.2rem}
+.social a{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:14px;background:#fff;box-shadow:var(--shadow-sm);transition:transform .2s ease,box-shadow .2s ease}
+.social a:hover{transform:translateY(-3px)}
+.social a svg{width:22px;height:22px;display:block}
+.social a.fb svg{fill:#1877f2}
+.social a.ig svg{fill:#e1306c}
