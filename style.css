@@ -231,6 +231,16 @@ footer a:hover{color:#fff}
 .match-win.show{display:block;animation:pop .5s ease}
 @media(max-width:480px){.match-grid{gap:.6rem}}
 
+/* ---------- POLICIES PAGE ---------- */
+.pol-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin-bottom:2.4rem}
+.pol-card{background:#fff;border:2px solid #f0e3ff;border-radius:22px;padding:1.4rem;text-align:center;box-shadow:var(--shadow-sm)}
+.pol-card .pico{font-size:2.4rem;display:block;margin-bottom:.4rem}
+.pol-card h3{font-family:var(--font-head);color:var(--grape);margin-bottom:.3rem}
+.pol-card p{color:var(--ink-soft);font-weight:600;font-size:.92rem}
+.pol-note{margin-top:2rem;background:#eef7ff;border:2px dashed var(--sky);border-radius:18px;padding:1.1rem 1.3rem;text-align:center;font-weight:700;color:var(--ink)}
+@media(max-width:860px){.pol-cards{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.pol-cards{grid-template-columns:1fr}}
+
 /* reveal on scroll */
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
 .reveal.in{opacity:1;transform:none}
