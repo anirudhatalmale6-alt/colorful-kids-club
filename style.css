@@ -213,6 +213,23 @@ footer a:hover{color:#fff}
 .foot-bottom{border-top:1px solid rgba(255,255,255,.15);margin-top:2rem;padding-top:1.2rem;text-align:center;color:#a992d6;font-size:.9rem}
 .demo-note{background:var(--marigold);color:var(--ink);text-align:center;font-family:var(--font-head);font-weight:700;padding:.6rem;font-size:.95rem}
 
+/* ---------- MEMORY MATCH GAME ---------- */
+.match-bar{display:flex;align-items:center;justify-content:center;gap:1.2rem;flex-wrap:wrap;margin:0 0 1.6rem}
+.match-stat{font-family:var(--font-head);font-weight:700;color:var(--ink);background:#fff;border:2px solid #f0e3ff;border-radius:999px;padding:.5rem 1.1rem;box-shadow:var(--shadow-sm)}
+.match-stat b{color:var(--grape)}
+.match-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;max-width:520px;margin:0 auto}
+.mm-card{position:relative;aspect-ratio:1;border:none;background:none;cursor:pointer;perspective:600px;padding:0}
+.mm-face{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;border-radius:18px;font-size:clamp(1.8rem,7vw,2.6rem);backface-visibility:hidden;transition:transform .35s ease;box-shadow:var(--shadow-sm)}
+.mm-back{background:linear-gradient(135deg,var(--grape),var(--pink));color:#fff;font-family:var(--font-head);font-weight:800}
+.mm-front{background:#fff;border:3px solid var(--marigold);transform:rotateY(180deg)}
+.mm-card.open .mm-back,.mm-card.done .mm-back{transform:rotateY(180deg)}
+.mm-card.open .mm-front,.mm-card.done .mm-front{transform:rotateY(360deg)}
+.mm-card.done{animation:pop .4s ease}
+.mm-card.done .mm-front{border-color:var(--leaf);background:#eafff0}
+.match-win{display:none;text-align:center;margin:1.6rem auto 0;max-width:460px;background:linear-gradient(135deg,var(--teal),var(--sky));color:#fff;font-family:var(--font-head);font-weight:700;font-size:1.15rem;padding:1rem 1.4rem;border-radius:20px;box-shadow:var(--shadow)}
+.match-win.show{display:block;animation:pop .5s ease}
+@media(max-width:480px){.match-grid{gap:.6rem}}
+
 /* reveal on scroll */
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
 .reveal.in{opacity:1;transform:none}

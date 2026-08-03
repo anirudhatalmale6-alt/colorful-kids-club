@@ -113,6 +113,24 @@
   </div>
 </section>
 
+<!-- MEMORY MATCH GAME -->
+<section class="pad" id="match" style="background:linear-gradient(180deg,#fff,#fff6ff)">
+  <div class="wrap reveal">
+    <div class="sec-head">
+      <div class="kicker">🎮 Play &amp; learn</div>
+      <h2>Festival Memory Match</h2>
+      <p>Flip the cards and find the matching pairs of festivals and symbols. Great for little memories! (One of several games we'll add to the real site.)</p>
+    </div>
+    <div class="match-bar">
+      <span class="match-stat">Moves: <b id="mvCount">0</b></span>
+      <span class="match-stat">Pairs: <b id="prCount">0</b>/6</span>
+      <button class="btn btn-ghost" id="mmReset">🔄 New game</button>
+    </div>
+    <div class="match-grid" id="matchGrid"></div>
+    <div class="match-win" id="matchWin">🎉 Brilliant! You matched them all in <b id="winMoves">0</b> moves!</div>
+  </div>
+</section>
+
 <!-- SCHEDULE -->
 <section class="pad" id="schedule">
   <div class="wrap">
@@ -226,6 +244,39 @@ document.getElementById('quizOpts').addEventListener('click',(ev)=>{
   if(b.dataset.correct){b.classList.add('correct');fb.textContent='🎉 Correct! Diwali is the Festival of Lights.';fb.style.color='#137a4a';}
   else{b.classList.add('wrong');document.querySelector('.opt[data-correct]').classList.add('correct');fb.textContent='Good try! The answer is Diwali 🪔';fb.style.color='#c0392b';}
 });
+// Memory match game
+(function(){
+  const symbols=['🪔','🕉️','🐘','🦚','🌸','🏹'];
+  const grid=document.getElementById('matchGrid'),mvEl=document.getElementById('mvCount'),prEl=document.getElementById('prCount'),winEl=document.getElementById('matchWin'),winMv=document.getElementById('winMoves');
+  let deck=[],flipped=[],lock=false,moves=0,pairs=0,seed=1;
+  function shuffle(a){for(let i=a.length-1;i>0;i--){seed=(seed*9301+49297)%233280;const j=Math.floor(seed/233280*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+  function build(){
+    grid.innerHTML='';flipped=[];lock=false;moves=0;pairs=0;seed=(seed*7+13)%99991+1;
+    mvEl.textContent='0';prEl.textContent='0';winEl.classList.remove('show');
+    deck=shuffle(symbols.concat(symbols).slice());
+    deck.forEach((s,i)=>{
+      const c=document.createElement('button');c.className='mm-card';c.dataset.sym=s;c.dataset.i=i;
+      c.innerHTML='<span class="mm-face mm-back">?</span><span class="mm-face mm-front">'+s+'</span>';
+      c.addEventListener('click',()=>flip(c));grid.appendChild(c);
+    });
+  }
+  function flip(c){
+    if(lock||c.classList.contains('done')||c.classList.contains('open'))return;
+    c.classList.add('open');flipped.push(c);
+    if(flipped.length===2){
+      moves++;mvEl.textContent=moves;lock=true;
+      const[a,b]=flipped;
+      if(a.dataset.sym===b.dataset.sym){
+        setTimeout(()=>{a.classList.add('done');b.classList.add('done');flipped=[];lock=false;pairs++;prEl.textContent=pairs;
+          if(pairs===6){winMv.textContent=moves;winEl.classList.add('show');}},420);
+      }else{
+        setTimeout(()=>{a.classList.remove('open');b.classList.remove('open');flipped=[];lock=false;},760);
+      }
+    }
+  }
+  document.getElementById('mmReset').addEventListener('click',build);
+  build();
+})();
 </script>
 </body>
 </html>
