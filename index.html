@@ -114,20 +114,26 @@
 </section>
 
 <!-- MEMORY MATCH GAME -->
-<section class="pad" id="match" style="background:linear-gradient(180deg,#fff,#fff6ff)">
+<section class="pad" id="match">
   <div class="wrap reveal">
-    <div class="sec-head">
-      <div class="kicker">🎮 Play &amp; learn</div>
-      <h2>Festival Memory Match</h2>
-      <p>Flip the cards and find the matching pairs of festivals and symbols. Great for little memories! (One of several games we'll add to the real site.)</p>
+    <div class="play">
+      <div class="copy">
+        <span class="tag">🎮 Play &amp; learn</span>
+        <h2>Festival Memory Match</h2>
+        <p>Flip the cards and find the matching pairs of festivals and symbols. Great for little memories! This is one of several games we'll add to the real site.</p>
+        <div class="match-bar">
+          <span class="match-stat">Moves: <b id="mvCount">0</b></span>
+          <span class="match-stat">Pairs: <b id="prCount">0</b>/6</span>
+          <button class="btn btn-primary" id="mmReset">🔄 New game</button>
+        </div>
+      </div>
+      <div>
+        <div class="mm-box">
+          <div class="match-grid" id="matchGrid"></div>
+          <div class="match-win" id="matchWin">🎉 Brilliant! You matched them all in <b id="winMoves">0</b> moves!</div>
+        </div>
+      </div>
     </div>
-    <div class="match-bar">
-      <span class="match-stat">Moves: <b id="mvCount">0</b></span>
-      <span class="match-stat">Pairs: <b id="prCount">0</b>/6</span>
-      <button class="btn btn-ghost" id="mmReset">🔄 New game</button>
-    </div>
-    <div class="match-grid" id="matchGrid"></div>
-    <div class="match-win" id="matchWin">🎉 Brilliant! You matched them all in <b id="winMoves">0</b> moves!</div>
   </div>
 </section>
 
