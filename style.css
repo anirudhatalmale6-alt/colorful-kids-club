@@ -145,6 +145,9 @@ section.pad{padding:clamp(3rem,7vw,5.5rem) 0}
 .slot .age{font-family:var(--font-head);font-weight:800;font-size:1.5rem;color:var(--ink)}
 .slot .time{color:var(--pink);font-weight:800;margin:.3rem 0}
 .slot .focus{color:var(--ink-soft);font-weight:600;font-size:.95rem}
+.slot-list{list-style:none;margin:.7rem 0 0;padding:0;text-align:left;display:inline-block}
+.slot-list li{color:var(--ink-soft);font-weight:600;font-size:.95rem;padding:.25rem 0 .25rem 1.4rem;position:relative}
+.slot-list li::before{content:"✔";position:absolute;left:0;color:var(--leaf);font-weight:800}
 
 /* ---------- CTA BANNER ---------- */
 .enroll{background:linear-gradient(120deg,var(--grape),var(--pink));border-radius:36px;padding:clamp(2.2rem,5vw,3.6rem);text-align:center;color:#fff;position:relative;overflow:hidden}
